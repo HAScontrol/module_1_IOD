@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Module 1 Exercise 3</title>
+<style>
+body { font-family: sans-serif; margin: 0; }
+.container { display: flex; min-height:
+100vh; align-items: stretch; }
+.column { background: goldenrod; display:
+flex; flex-direction: column; justify-content:
+center; align-items: center; flex: 1; }
+
+</style>
+</head>
+
+<body>
+
+ <div>
+    <label>Number of faces</label>
+    <input id="numberOfFaceInput" name="diceSelection" type="radio" value="D6"/>
+    <label for="numberOfFaceInput">D6</label>
+    <input id="numberOfFaceInput2" name="diceSelection" type="radio" value="D10"/>
+    <label for="numberOfFaceInput2">D10</label>
+ </div>   
+<button onclick="getResult()">Get Result</button>
+<div>
+    <label>Result</label>
+    <span id="resultSpan"></span>
+</div>
+
+<script>
+function getResult() {
+    if(document.getElementById('numberOfFaceInput').checked == true) {        
+        document.getElementById("resultSpan").innerHTML = getRandomInt(1, 7)      ;   
+    } else if(document.getElementById('numberOfFaceInput2').checked == true) {  
+        document.getElementById("resultSpan").innerHTML = getRandomInt(1, 11)  ;   
+    } 
+}
+
+function getRandomInt(min, max) {
+    let minCeiled = Math.ceil(min);
+    let maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+}
+</script>
+
+
+
+</script>
+</body>
+</html>
