@@ -31,24 +31,8 @@ center; align-items: center; flex: 1; }
     <span id="resultSpan"></span>
 </div>
 
-<script>
-function getResult() {
-    if(document.getElementById('numberOfFaceInput').checked == true) {        
-        document.getElementById("resultSpan").innerHTML = getRandomInt(1, 7)      ;   
-    } else if(document.getElementById('numberOfFaceInput2').checked == true) {  
-        document.getElementById("resultSpan").innerHTML = getRandomInt(1, 11)  ;   
-    } 
-}
 
-function getRandomInt(min, max) {
-    let minCeiled = Math.ceil(min);
-    let maxFloored = Math.floor(max);
-    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
-}
-</script>
+<script type="text/javascript" src="labexercise8.js"></script>
 
-
-
-</script>
 </body>
 </html>
