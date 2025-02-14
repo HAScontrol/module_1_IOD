@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Module 1 Exercise 3</title>
+<style>
+body { font-family: sans-serif; margin: 0; }
+.container { display: flex; min-height:
+100vh; align-items: stretch; }
+.column { background: goldenrod; display:
+flex; flex-direction: column; justify-content:
+center; align-items: center; flex: 1; }
+.button {
+        color: blueviolet; 
+        font-family:georgia;
+        background-color:blanchedalmond
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="column" id="column1">
+<h1 id="heading1">Hello</h1>
+<input type="text" id="text1">
+<img src="bird-8310172_960_720.png" alt="bird1" style="width:300px;height:300px;">
+<button id="button1" class="button" onclick="changeBgToGreen(); changeHeading1(getField1())">Change Me</button>
+</div>
+<div class="column" id="column2">
+<h1 id="heading2">World</h1>
+<input type="text" id="text2">
+<img src="bird-7671530_960_720.jpg" alt="bird2" style="width:300px;height:300px;">
+<button id="button2" class="button" onclick="changeBgToBlue(); changeHeading2(getField2())">Change Me</button>
+</div>
+</div>
+<script>
+function changeBgToGreen() {
+    document.getElementById("column1").style.backgroundColor='green';
+}
+
+function changeBgToBlue() {
+    document.getElementById("column2").style.backgroundColor='blue';
+}
+
+
+function changeHeading1(text) {
+    document.getElementById("heading1").innerHTML=text;
+    document.getElementById("text1").value="";
+}
+
+function getField1() {
+    return document.getElementById("text1").value;
+}
+
+function changeHeading2(text) {
+    document.getElementById("heading2").innerHTML=text;
+    document.getElementById("text2").value="";
+}
+
+function getField2() {
+    return document.getElementById("text2").value;
+}
+
+
+
+</script>
+</body>
+</html>
